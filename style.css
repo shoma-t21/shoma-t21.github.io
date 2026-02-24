@@ -46,7 +46,7 @@ header{
 
 .brand{
   font-weight:700;
-  font-size:18px; 
+  font-size:24px; 
   letter-spacing:0.2px;
   text-decoration:none;
   color:var(--link);
@@ -57,7 +57,7 @@ header{
   display:flex;
   flex-wrap:wrap;
   gap:18px;
-  font-size:16px;
+  font-size:20px;
 }
 
 .hero{
