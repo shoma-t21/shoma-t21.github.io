@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Videos | Shoma Tanaka</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">Shoma Tanaka</a>
+      <nav class="navlinks">
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="videos.html">Videos</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Videos</h2>
+      <p class="small">You can embed YouTube/Vimeo or link to MP4 files.</p>
+
+      <div class="item">
+        <div class="item-title">Patabot summary movie</div>
+        <div class="meta"><a href="#">YouTube link</a></div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">Swarm experiment demo</div>
+        <div class="meta"><a href="#">Video link</a></div>
+      </div>
+    </section>
+
+    <div class="footer">© <span id="y"></span> Shoma Tanaka</div>
+  </main>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
