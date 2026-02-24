@@ -10,14 +10,15 @@
 <body>
   <header>
     <div class="container nav">
-      <div class="brand">Shoma Tanaka</div>
+      <!-- 左上クリックでHomeへ -->
+      <a class="brand" href="index.html">Shoma Tanaka</a>
+
+      <!-- 右上タブ：別ページへ -->
       <nav class="navlinks">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
-        <a href="#talks">Talks</a>
-        <a href="#contact">Contact</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="videos.html">Videos</a>
+        <a href="gallery.html">Gallery</a>
       </nav>
     </div>
   </header>
@@ -28,6 +29,7 @@
         <!-- Left: profile -->
         <aside class="card">
           <img class="portrait" src="photo.jpg" alt="Shoma Tanaka" />
+
           <h1 class="name">Shoma Tanaka</h1>
           <p class="affil">
             PhD Student, Institute of Science Tokyo<br/>
@@ -56,15 +58,15 @@
 
         <!-- Right: content -->
         <div>
-          <section id="about">
+          <section>
             <h2>About</h2>
             <p>
-              I study electronics-free soft robotic systems that exploit nonlinear fluid–structure interactions to embed
-              sensing, decision-making, and collective behaviors in the body and environment.
+              I study electronics-free soft robotic systems that exploit nonlinear fluid–structure interactions to
+              embed sensing, decision-making, and collective behaviors in the body and environment.
             </p>
           </section>
 
-          <section id="research">
+          <section>
             <h2>Research</h2>
 
             <div class="item">
@@ -81,38 +83,13 @@
               <div class="item-title">Roller-Walker II: ankle-switching leg–wheel hybrid</div>
               <div class="meta">Mechanical switching · Efficiency/CoT · Robust locomotion</div>
             </div>
+
+            <p class="small" style="margin-top:10px;">
+              See more: <a href="publications.html">Publications</a> · <a href="projects.html">Projects</a>
+            </p>
           </section>
 
-          <section id="publications">
-            <h2>Publications</h2>
-            <div class="item">
-              <div class="item-title">Paper Title (Year)</div>
-              <div class="meta">Authors · Journal/Conference · <a href="#">DOI</a> · <a href="#">PDF</a></div>
-            </div>
-            <div class="item">
-              <div class="item-title">Paper Title (Year)</div>
-              <div class="meta">Authors · Journal/Conference · <a href="#">DOI</a></div>
-            </div>
-            <p class="small">(*Replace with your actual list. We can later automate this from BibTeX if you want.)</p>
-          </section>
-
-          <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-              <li><b>Nonlinear Physical Intelligence in Soft Machines</b> (RoboSoft 2026 workshop proposal)</li>
-              <li><b>Self-oscillating fluidic oscillators as “neurons”</b> (reading/replication notes)</li>
-            </ul>
-          </section>
-
-          <section id="talks">
-            <h2>Talks</h2>
-            <ul>
-              <li>Talk Title — Venue, Year</li>
-              <li>Poster Title — Conference, Year</li>
-            </ul>
-          </section>
-
-          <section id="contact">
+          <section>
             <h2>Contact</h2>
             <p>
               Email: shoma [at] example.com<br/>
