@@ -47,7 +47,10 @@ header{
 .brand{
   font-weight:700;
   letter-spacing:0.2px;
+  text-decoration:none;
+  color:var(--text);
 }
+.brand:hover{ text-decoration:underline; }
 
 .navlinks{
   display:flex;
