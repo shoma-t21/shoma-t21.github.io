@@ -31,7 +31,7 @@ a:hover{ text-decoration:underline; }
 header{
   position:sticky;
   top:0;
-  background:#eeeeee
+  background:#f8f8f8;
   border-bottom:1px solid #dbe3ff;
   z-index:10;
 }
