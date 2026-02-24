@@ -51,7 +51,10 @@ header{
   text-decoration:none;
   color:var(--link);
 }
-.brand:hover{ text-decoration:underline; }
+.brand:hover{
+  text-decoration:none;
+  opacity:0.8;
+}
 
 .navlinks{
   display:flex;
