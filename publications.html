@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publications | Shoma Tanaka</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">Shoma Tanaka</a>
+      <nav class="navlinks">
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="videos.html">Videos</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Publications</h2>
+
+      <div class="item">
+        <div class="item-title">Paper Title (Year)</div>
+        <div class="meta">Authors · Journal/Conference · <a href="#">DOI</a> · <a href="#">PDF</a></div>
+      </div>
+
+      <div class="item">
+        <div class="item-title">Paper Title (Year)</div>
+        <div class="meta">Authors · Journal/Conference · <a href="#">DOI</a></div>
+      </div>
+
+      <p class="small">Tip: later we can auto-generate this list from BibTeX.</p>
+    </section>
+
+    <div class="footer">© <span id="y"></span> Shoma Tanaka</div>
+  </main>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
