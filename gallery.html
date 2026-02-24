@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery | Shoma Tanaka</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap:14px;
+      margin-top:12px;
+    }
+    .gallery img{
+      width:100%;
+      border-radius:14px;
+      border:1px solid #e6e6e6;
+      display:block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">Shoma Tanaka</a>
+      <nav class="navlinks">
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="videos.html">Videos</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Gallery</h2>
+      <p class="small">Upload images to the repo and list them here.</p>
+
+      <div class="gallery">
+        <!-- 例：gallery1.jpg をアップロードしたら src を合わせる -->
+        <!-- <img src="gallery1.jpg" alt="Gallery image 1"> -->
+        <!-- <img src="gallery2.jpg" alt="Gallery image 2"> -->
+      </div>
+    </section>
+
+    <div class="footer">© <span id="y"></span> Shoma Tanaka</div>
+  </main>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
