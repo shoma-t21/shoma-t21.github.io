@@ -1,45 +1,137 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Shoma Tanaka</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            max-width: 800px;
-        }
-        h1 {
-            border-bottom: 2px solid #333;
-        }
-        a {
-            color: #0066cc;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shoma Tanaka</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Shoma Tanaka</div>
+      <nav class="navlinks">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#talks">Talks</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<h1>Shoma Tanaka</h1>
+  <main class="container">
+    <div class="hero">
+      <div class="grid">
+        <!-- Left: profile -->
+        <aside class="card">
+          <!-- 画像を入れるなら photo.jpg をアップロードして src を photo.jpg に -->
+          <!-- <img class="portrait" src="photo.jpg" alt="Shoma Tanaka" /> -->
+          <h1 class="name">Shoma Tanaka</h1>
+          <p class="affil">
+            PhD Student, Institute of Science Tokyo<br/>
+            Visiting Researcher (planned), TU/e
+          </p>
 
-<p>
-PhD Student<br>
-Institute of Science Tokyo
-</p>
+          <p class="small">
+            Soft robotics, fluid–structure interaction, embodied/physical intelligence.
+          </p>
 
-<h2>Research Interests</h2>
-<ul>
-    <li>Soft Robotics</li>
-    <li>Fluid-Structure Interaction</li>
-    <li>Embodied Intelligence</li>
-</ul>
+          <div class="badges">
+            <span class="badge">Soft Robotics</span>
+            <span class="badge">FSI</span>
+            <span class="badge">Swarm / Collective</span>
+          </div>
 
-<h2>Publications</h2>
-<p>Coming soon...</p>
+          <hr style="border:none;border-top:1px solid #e6e6e6;margin:14px 0;">
 
-<h2>Contact</h2>
-<p>
-Email: your-email@example.com
-</p>
+          <div class="small">
+            <div><a href="https://scholar.google.com/">Google Scholar</a></div>
+            <div><a href="https://orcid.org/">ORCID</a></div>
+            <div><a href="https://www.linkedin.com/">LinkedIn</a></div>
+            <!-- CVを置くなら cv.pdf をアップロードしてリンク -->
+            <!-- <div><a href="cv.pdf">CV (PDF)</a></div> -->
+          </div>
+        </aside>
 
+        <!-- Right: content -->
+        <div>
+          <section id="about">
+            <h2>About</h2>
+            <p>
+              I study electronics-free soft robotic systems that exploit nonlinear fluid–structure interactions to embed
+              sensing, decision-making, and collective behaviors in the body and environment.
+            </p>
+          </section>
+
+          <section id="research">
+            <h2>Research</h2>
+
+            <div class="item">
+              <div class="item-title">Patabot: self-oscillating fluidic soft robot</div>
+              <div class="meta">Self-oscillating pneumatic actuators · Embodied intelligence · Minimal control</div>
+            </div>
+
+            <div class="item">
+              <div class="item-title">Collective behaviors in fluidic robot swarms</div>
+              <div class="meta">Interaction-driven locomotion · Autonomous aggregation · Environment coupling</div>
+            </div>
+
+            <div class="item">
+              <div class="item-title">Roller-Walker II: ankle-switching leg–wheel hybrid</div>
+              <div class="meta">Mechanical switching · Efficiency/CoT · Robust locomotion</div>
+            </div>
+          </section>
+
+          <section id="publications">
+            <h2>Publications</h2>
+            <div class="item">
+              <div class="item-title">Paper Title (Year)</div>
+              <div class="meta">Authors · Journal/Conference · <a href="#">DOI</a> · <a href="#">PDF</a></div>
+            </div>
+            <div class="item">
+              <div class="item-title">Paper Title (Year)</div>
+              <div class="meta">Authors · Journal/Conference · <a href="#">DOI</a></div>
+            </div>
+            <p class="small">(*Replace with your actual list. We can later automate this from BibTeX if you want.)</p>
+          </section>
+
+          <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+              <li><b>Nonlinear Physical Intelligence in Soft Machines</b> (RoboSoft 2026 workshop proposal)</li>
+              <li><b>Self-oscillating fluidic oscillators as “neurons”</b> (reading/replication notes)</li>
+            </ul>
+          </section>
+
+          <section id="talks">
+            <h2>Talks</h2>
+            <ul>
+              <li>Talk Title — Venue, Year</li>
+              <li>Poster Title — Conference, Year</li>
+            </ul>
+          </section>
+
+          <section id="contact">
+            <h2>Contact</h2>
+            <p>
+              Email: shoma [at] example.com<br/>
+              Location: Tokyo / Eindhoven
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      © <span id="y"></span> Shoma Tanaka · Powered by GitHub Pages
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
