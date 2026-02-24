@@ -16,6 +16,7 @@ body{
   color:var(--text);
   background:var(--bg);
   line-height:1.6;
+  font-size:16.5px;
 }
 
 a{ color:var(--link); text-decoration:none; }
@@ -30,9 +31,8 @@ a:hover{ text-decoration:underline; }
 header{
   position:sticky;
   top:0;
-  background:#e6edff;
-  border-bottom:1px solid var(--line);
-  backdrop-filter: blur(8px);
+  background:#f3f6ff;
+  border-bottom:1px solid #dbe3ff;
   z-index:10;
 }
 
@@ -46,6 +46,7 @@ header{
 
 .brand{
   font-weight:700;
+  font-size:18px; 
   letter-spacing:0.2px;
   text-decoration:none;
   color:var(--text);
@@ -55,8 +56,8 @@ header{
 .navlinks{
   display:flex;
   flex-wrap:wrap;
-  gap:14px;
-  font-size:14px;
+  gap:18px;
+  font-size:16px;
 }
 
 .hero{
