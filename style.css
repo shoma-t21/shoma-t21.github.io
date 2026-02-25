@@ -193,7 +193,7 @@ li{ margin:6px 0; }
 
 .hero-video{
   position:relative;
-  height:460px;
+  height: clamp(420px, 60vh, 760px); 
   border-radius:18px;
   overflow:hidden;
   background:#000;
