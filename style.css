@@ -50,6 +50,7 @@ header{
   letter-spacing:0.2px;
   text-decoration:none;
   color:var(--link);
+  margin-left:12px; 
 }
 .brand:hover{ text-decoration:underline; }
 
