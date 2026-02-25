@@ -231,29 +231,7 @@ li{ margin:6px 0; }
   font-size: clamp(34px, 4vw, 52px); /* 「Embedding...」級の大きさ */
   font-weight:700;
   line-height:1.1;
-
-  /* 黒文字を確実に読めるように、うっすら白背景（不要なら下3行を消してOK） */
-  background: rgba(255,255,255,0.75);
-  padding: 12px 16px;
-  border-radius: 14px;
 }
-.hero-text{ max-width:900px; color:#fff; }
-.hero-kicker{
-  font-size:18px;
-  letter-spacing:0.4px;
-  opacity:0.95;
-  margin-bottom:10px;
-}
-.hero-title{
-  margin:0 0 10px;
-  font-size:46px;
-  line-height:1.1;
-}
-.hero-sub{
-  font-size:16px;
-  opacity:0.92;
-}
-
 .section{
   padding:42px 0;
   border-top:1px solid var(--line);
