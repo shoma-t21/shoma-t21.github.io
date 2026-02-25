@@ -193,7 +193,7 @@ li{ margin:6px 0; }
 
 .hero-video{
   position:relative;
-  height: clamp(520px, 70vh, 900px);
+  height: clamp(620px, 80vh, 1100px);
   border-radius:18px;
   overflow:hidden;
   background:#000;
@@ -380,7 +380,7 @@ li{ margin:6px 0; }
 
 /* Responsive for content layout */
 @media (max-width: 900px){
-  .hero-video{ height:380px; }
+  .hero-video{ height:460px; }
   .hero-title{ font-size:34px; }
   .media{ flex:1; }
   .split{ flex-direction:column; }
