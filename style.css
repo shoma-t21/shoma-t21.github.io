@@ -380,7 +380,7 @@ li{ margin:6px 0; }
 
 /* Responsive for content layout */
 @media (max-width: 900px){
-  .hero-video{ height:320px; }
+  .hero-video{ height:380px; }
   .hero-title{ font-size:34px; }
   .media{ flex:1; }
   .split{ flex-direction:column; }
