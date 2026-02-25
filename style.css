@@ -381,7 +381,7 @@ li{ margin:6px 0; }
 .split.align-top{ align-items:flex-start; }
 
 .about-split .media{
-  flex:0 0 520px;  /* 顔写真を大きめにしたい場合。大きすぎたら 460px などに */
+  flex:0 0 460px;  /* 顔写真を大きめにしたい場合。大きすぎたら 460px などに */
 }
 
 .about-name{
