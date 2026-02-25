@@ -197,7 +197,7 @@ li{ margin:6px 0; }
   border-radius:18px;
   overflow:hidden;
   background:#000;
-  margin:24px 0 34px;
+  margin:0;
   border:1px solid var(--line);
 }
 .hero-video{
