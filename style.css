@@ -147,6 +147,40 @@ li{ margin:6px 0; }
   font-size:13px;
 }
 
+.menu-btn{
+  display:none;
+  font-size:22px;
+  line-height:1;
+  padding:8px 10px;
+  border:1px solid #d0d0d0;
+  background:#fff;
+  border-radius:10px;
+  cursor:pointer;
+}
+
 @media (max-width: 820px){
   .grid{ grid-template-columns: 1fr; }
+
+  /* スマホではタブを隠して、≡ボタンを表示 */
+  .menu-btn{ display:block; }
+  .navlinks{ display:none; }
+
+  /* メニューを開いたとき（JSで class="open" を付ける） */
+  .navlinks.open{
+    display:flex;
+    position:absolute;
+    top:54px;              /* ヘッダーの下に出す */
+    right:18px;
+    flex-direction:column;
+    gap:10px;
+    padding:12px;
+    background:#ffffff;
+    border:1px solid #e0e0e0;
+    border-radius:12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    z-index:20;
+  }
+
+  /* 右上にメニューを出すため nav を基準にする */
+  .nav{ position:relative; }
 }
