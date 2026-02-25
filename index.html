@@ -45,28 +45,53 @@
 
     <!-- 2) INTRO 1 : left image, right text -->
     <section class="section" id="about">
-      <h2 class="section-heading">About</h2>
-
-      <div class="split">
+      <div class="split align-top about-split">
+        <!-- 左：顔写真 -->
         <div class="media">
-          <img src="photo.jpg" alt="Shoma Tanaka" />
+          <!-- ファイル名が違う場合は photo.jpeg を実ファイル名に合わせてください -->
+          <img src="photo.jpeg" alt="Shoma Tanaka" />
         </div>
-
+    
+        <!-- 右：名前・所属・リンクなど -->
         <div class="content">
-          <p class="lead">
-            I'm a Ph.D. student in the Laboratory of Adaptive Functional Systems at Institute of Science Tokyo.
-          </p>
-
-          <p>
-            PhD Student, Institute of Science Tokyo.<br/>
-            Visiting Researcher (planned), TU/e.
-          </p>
-
-          <div class="tagrow">
-            <span class="tag">Soft Robotics</span>
-            <span class="tag">FSI</span>
-            <span class="tag">Embodied/Physical Intelligence</span>
-            <span class="tag">Swarm / Collective</span>
+          <div class="about-name">Shoma Tanaka</div>
+          <div class="about-role">Ph.D. student</div>
+    
+          <div class="about-affil">
+            Department of Mechanical Engineering,<br>
+            Institute of Science Tokyo, Japan
+          </div>
+    
+          <div class="about-labs">
+            <div class="about-labs-title">Labs</div>
+            <ul class="lab-list">
+              <li>
+                <a href="https://sites.google.com/view/nabaelab/home" target="_blank" rel="noopener">
+                  Laboratory of Adaptive Functional Systems
+                </a>
+                @ Institute of Science Tokyo
+              </li>
+              <li>
+                <a href="https://overvelde.com/" target="_blank" rel="noopener">
+                  Autonomous Matter &amp; Machines
+                </a>
+                @ AMOLF &amp; TU/e
+                <span class="muted">(May 2026 – Jan 2027, planned)</span>
+              </li>
+            </ul>
+          </div>
+    
+          <!-- SNSなど（いまInterestsにあったやつをここへ） -->
+          <div class="social">
+            <a href="https://scholar.google.co.jp/citations?user=a789yMoAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="https://www.linkedin.com/in/shoma-tanaka-2102792b7/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/shoma-t21" target="_blank" rel="noopener">GitHub</a>
+            <a href="CV_ShomaTanaka.pdf">CV (PDF)</a>
+          </div>
+    
+          <div class="emails">
+            <div>tanaka.s.ca[at]m.titech.ac.jp</div>
+            <div>tanaka.s.4e89[at]m.isct.ac.jp</div>
           </div>
         </div>
       </div>
@@ -75,34 +100,24 @@
     <!-- 3) INTRO 2 : right image, left text + social links -->
     <section class="section" id="interests">
       <h2 class="section-heading">Interests</h2>
-
-      <div class="split reverse">
+    
+      <div class="split reverse align-top">
+        <!-- 右：画像（あとで差し替え） -->
         <div class="media">
-          <!-- about2.jpg をアップロード（実験風景やロボット写真など） -->
+          <div class="media-placeholder">
+            Image coming soon
+          </div>
+          <!-- 画像を入れるときは上のdivを消して、下を使ってください
           <img src="about2.jpg" alt="Research scene" />
+          -->
         </div>
-
+    
+        <!-- 左：文章 -->
         <div class="content">
           <p class="lead">
-            I’m interested in how nonlinear mechanics and fluidic interactions can create robust, autonomous behaviors
-            without electronic sensing or computation.
-          </p>
-
-          <p>
-            Current topics include self-oscillating pneumatic actuators, interaction-driven locomotion, synchronization,
-            and collective behaviors in soft robot swarms.
-          </p>
-
-          <div class="social">
-            <a href="https://scholar.google.com/">Google Scholar</a>
-            <a href="https://orcid.org/">ORCID</a>
-            <a href="https://www.linkedin.com/">LinkedIn</a>
-            <a href="https://github.com/">GitHub</a>
-            <a href="CV_ShomaTanaka.pdf">CV (PDF)</a>
-          </div>
-
-          <p class="smallmuted" style="margin-top:10px;">
-            Email: shoma [at] example.com · Location: Tokyo / Eindhoven
+            My research focuses on realizing autonomy and functionality in physical machines by harnessing mechanical and
+            fluidic nonlinearities as well as material functionalities. I also aim to reproduce the remarkable motions
+            observed in living organisms by exploring their underlying structural principles.
           </p>
         </div>
       </div>
