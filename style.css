@@ -23,9 +23,9 @@ a{ color:var(--link); text-decoration:none; }
 a:hover{ text-decoration:underline; }
 
 .container{
-  max-width:980px;
+  max-width:1200px;
   margin:0 auto;
-  padding: 0 18px;
+  padding: 0 24px;
 }
 
 header{
@@ -199,6 +199,11 @@ li{ margin:6px 0; }
   background:#000;
   margin:24px 0 34px;
   border:1px solid var(--line);
+}
+.hero-video{
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  border-radius:0;
 }
 .hero-bg{
   width:100%;
