@@ -223,6 +223,7 @@ li{ margin:6px 0; }
   align-items:flex-end;      /* 下に寄せる */
   justify-content:flex-start;/* 左に寄せる */
   padding:40px;              /* 左下の余白（好みで調整） */
+  padding-left:70px;
   text-align:left;
   background:transparent;    /* グラデは消す */
 }
