@@ -11,12 +11,11 @@
   <header>
     <div class="container nav">
       <a class="brand" href="index.html">Shoma Tanaka</a>
-  
-      <!-- 追加：スマホ用ボタン -->
+
       <button class="menu-btn" aria-label="Open menu" aria-expanded="false">
         &#9776;
       </button>
-  
+
       <nav class="navlinks">
         <a href="publications.html">Publications</a>
         <a href="projects.html">Projects</a>
@@ -27,81 +26,177 @@
   </header>
 
   <main class="container">
-    <div class="hero">
-      <div class="grid">
-        <!-- Left: profile -->
-        <aside class="card">
-          <img class="portrait" src="photo.jpg" alt="Shoma Tanaka" />
 
-          <h1 class="name">Shoma Tanaka</h1>
-          <p class="affil">
-            PhD Student, Institute of Science Tokyo<br/>
-            Visiting Researcher (planned), TU/e
-          </p>
+    <!-- 1) HERO VIDEO -->
+    <section class="hero-video" aria-label="Intro video">
+      <!-- hero.mp4 をアップロードしてください -->
+      <video class="hero-bg" autoplay muted loop playsinline>
+        <source src="hero.mp4" type="video/mp4" />
+      </video>
 
-          <p class="small">
-            Soft robotics, fluid–structure interaction, embodied/physical intelligence.
-          </p>
-
-          <div class="badges">
-            <span class="badge">Soft Robotics</span>
-            <span class="badge">FSI</span>
-            <span class="badge">Swarm / Collective</span>
+      <div class="hero-overlay">
+        <div class="hero-text">
+          <div class="hero-kicker">I'm a PhD student in soft robotics.</div>
+          <h1 class="hero-title">Embedding autonomy in soft machines</h1>
+          <div class="hero-sub">
+            Electronics-free soft robots · Nonlinear FSI · Collective behavior
           </div>
-
-          <hr style="border:none;border-top:1px solid #e6e6e6;margin:14px 0;">
-
-          <div class="small">
-            <div><a href="https://scholar.google.com/">Google Scholar</a></div>
-            <div><a href="https://orcid.org/">ORCID</a></div>
-            <div><a href="https://www.linkedin.com/">LinkedIn</a></div>
-            <div><a href="CV_ShomaTanaka.pdf">CV (PDF)</a></div>
-          </div>
-        </aside>
-
-        <!-- Right: content -->
-        <div>
-          <section>
-            <h2>About</h2>
-            <p>
-              I study electronics-free soft robotic systems that exploit nonlinear fluid–structure interactions to
-              embed sensing, decision-making, and collective behaviors in the body and environment.
-            </p>
-          </section>
-
-          <section>
-            <h2>Research</h2>
-
-            <div class="item">
-              <div class="item-title">Patabot: self-oscillating fluidic soft robot</div>
-              <div class="meta">Self-oscillating pneumatic actuators · Embodied intelligence · Minimal control</div>
-            </div>
-
-            <div class="item">
-              <div class="item-title">Collective behaviors in fluidic robot swarms</div>
-              <div class="meta">Interaction-driven locomotion · Autonomous aggregation · Environment coupling</div>
-            </div>
-
-            <div class="item">
-              <div class="item-title">Roller-Walker II: ankle-switching leg–wheel hybrid</div>
-              <div class="meta">Mechanical switching · Efficiency/CoT · Robust locomotion</div>
-            </div>
-
-            <p class="small" style="margin-top:10px;">
-              See more: <a href="publications.html">Publications</a> · <a href="projects.html">Projects</a>
-            </p>
-          </section>
-
-          <section>
-            <h2>Contact</h2>
-            <p>
-              Email: shoma [at] example.com<br/>
-              Location: Tokyo / Eindhoven
-            </p>
-          </section>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- 2) INTRO 1 : left image, right text -->
+    <section class="section" id="about">
+      <h2 class="section-heading">About</h2>
+
+      <div class="split">
+        <div class="media">
+          <!-- ファイル名が photo.jpeg ならこれでOK。photo.jpg なら差し替え -->
+          <img src="photo.jpeg" alt="Shoma Tanaka" />
+        </div>
+
+        <div class="content">
+          <p class="lead">
+            I study electronics-free soft robotic systems that exploit nonlinear fluid–structure interactions to embed
+            sensing, decision-making, and collective behaviors in the body and environment.
+          </p>
+
+          <p>
+            PhD Student, Institute of Science Tokyo.<br/>
+            Visiting Researcher (planned), TU/e.
+          </p>
+
+          <div class="tagrow">
+            <span class="tag">Soft Robotics</span>
+            <span class="tag">FSI</span>
+            <span class="tag">Embodied/Physical Intelligence</span>
+            <span class="tag">Swarm / Collective</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3) INTRO 2 : right image, left text + social links -->
+    <section class="section" id="interests">
+      <h2 class="section-heading">Interests</h2>
+
+      <div class="split reverse">
+        <div class="media">
+          <!-- about2.jpg をアップロード（実験風景やロボット写真など） -->
+          <img src="about2.jpg" alt="Research scene" />
+        </div>
+
+        <div class="content">
+          <p class="lead">
+            I’m interested in how nonlinear mechanics and fluidic interactions can create robust, autonomous behaviors
+            without electronic sensing or computation.
+          </p>
+
+          <p>
+            Current topics include self-oscillating pneumatic actuators, interaction-driven locomotion, synchronization,
+            and collective behaviors in soft robot swarms.
+          </p>
+
+          <div class="social">
+            <a href="https://scholar.google.com/">Google Scholar</a>
+            <a href="https://orcid.org/">ORCID</a>
+            <a href="https://www.linkedin.com/">LinkedIn</a>
+            <a href="https://github.com/">GitHub</a>
+            <a href="CV_ShomaTanaka.pdf">CV (PDF)</a>
+          </div>
+
+          <p class="smallmuted" style="margin-top:10px;">
+            Email: shoma [at] example.com · Location: Tokyo / Eindhoven
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4) CAREER : image top, text below -->
+    <section class="section" id="career">
+      <h2 class="section-heading">Career</h2>
+
+      <div class="imgtop">
+        <!-- career.jpg をアップロード（研究写真/ラボ/ロボット集合写真など） -->
+        <img src="career.jpg" alt="Career image" />
+      </div>
+
+      <ul class="timeline">
+        <li>
+          <div class="when">202X–now</div>
+          <div class="what">PhD Student, Institute of Science Tokyo</div>
+        </li>
+        <li>
+          <div class="when">2026</div>
+          <div class="what">Visiting Researcher (planned), TU/e (Soft Robotic Matter Group)</div>
+        </li>
+        <li>
+          <div class="when">20XX</div>
+          <div class="what">BSc/MSc …（ここを埋めてください）</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 5) RESEARCH HIGHLIGHTS : left video, right description -->
+    <section class="section" id="highlights">
+      <h2 class="section-heading">Research highlights</h2>
+
+      <div class="highlight">
+        <div class="highlight-media">
+          <video controls playsinline>
+            <source src="highlight_patabot.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="highlight-body">
+          <h3 class="highlight-title">Patabot: self-oscillating fluidic soft robot</h3>
+          <p>
+            A minimal soft robot that exploits self-oscillating fluid–structure interactions to generate locomotion
+            and interaction-driven autonomy without electronics.
+          </p>
+          <div class="linkrow">
+            <a href="#">Paper</a>
+            <a href="#">DOI</a>
+            <a href="#">Project page</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <div class="highlight-media">
+          <video controls playsinline>
+            <source src="highlight_swarm.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="highlight-body">
+          <h3 class="highlight-title">Collective behaviors in fluidic robot swarms</h3>
+          <p>
+            Emergent collective behaviors driven by local mechanical/fluidic interactions and environmental feedback.
+          </p>
+          <div class="linkrow">
+            <a href="#">Paper</a>
+            <a href="#">Video</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <div class="highlight-media">
+          <video controls playsinline>
+            <source src="highlight_rollerwalker.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="highlight-body">
+          <h3 class="highlight-title">Roller-Walker II: ankle-switching leg–wheel hybrid</h3>
+          <p>
+            A leg–wheel hybrid locomotion system with mechanical switching, aiming at robust and efficient mobility.
+          </p>
+          <div class="linkrow">
+            <a href="#">Paper</a>
+            <a href="#">Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <div class="footer">
       © <span id="y"></span> Shoma Tanaka · Powered by GitHub Pages
@@ -111,21 +206,23 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
+
+  <!-- hamburger -->
   <script>
-  const btn = document.querySelector('.menu-btn');
-  const nav = document.querySelector('.navlinks');
+    const btn = document.querySelector('.menu-btn');
+    const nav = document.querySelector('.navlinks');
 
-  btn.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
+    btn.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
 
-  document.addEventListener('click', (e) => {
-    if (!nav.contains(e.target) && !btn.contains(e.target)) {
-      nav.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  });
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !btn.contains(e.target)) {
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
   </script>
 </body>
 </html>
