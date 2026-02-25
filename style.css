@@ -418,11 +418,23 @@ li{ margin:6px 0; }
 .muted{ color: var(--muted); }
 
 /* emails under social links */
-.emails{
+.contactline{
   margin-top: 12px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:baseline;
+  font-size:14px;
+  color: var(--text);        /* ←薄字にしない */
+}
+
+.contactlabel{
+  font-weight:700;
+}
+
+.contactemails .sep{
+  margin: 0 6px;
   color: var(--muted);
-  font-size: 14px;
-  line-height: 1.6;
 }
 
 /* Interests image placeholder */
