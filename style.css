@@ -449,3 +449,18 @@ li{ margin:6px 0; }
   justify-content:center;
   font-size:14px;
 }
+
+/* Highlight keywords in Interests */
+.interest-text{
+  font-size: 18px;     /* 既に lead で設定済みなら不要 */
+  line-height: 1.85;   /* 少しゆったりで上品に */
+}
+
+.hl{
+  font-weight: 800;
+  color: var(--link);                /* サイトのテーマ色 */
+  background: rgba(21, 101, 192, 0.08); /* うっすら色面（上品） */
+  padding: 0.06em 0.28em;
+  border-radius: 0.5em;
+  white-space: nowrap;              /* 重要語が途中で改行されにくい */
+}
