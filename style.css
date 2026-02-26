@@ -458,9 +458,13 @@ li{ margin:6px 0; }
 
 .hl{
   font-weight: 800;
-  color: var(--link);                /* サイトのテーマ色 */
-  background: rgba(21, 101, 192, 0.08); /* うっすら色面（上品） */
-  padding: 0.06em 0.28em;
-  border-radius: 0.5em;
-  white-space: nowrap;              /* 重要語が途中で改行されにくい */
+  color: var(--link);
+  background: transparent;                 /* ←裏地なし */
+  padding: 0;                              /* ←余白なし */
+  border-radius: 0;
+  text-decoration: underline;              /* ←下線 */
+  text-decoration-thickness: 2px;          /* 下線の太さ */
+  text-underline-offset: 0.18em;           /* 文字と下線の距離 */
+  text-decoration-color: rgba(21, 101, 192, 0.55); /* 下線を少し薄く */
+  white-space: nowrap;
 }
