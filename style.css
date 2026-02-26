@@ -459,12 +459,9 @@ li{ margin:6px 0; }
 .hl{
   font-weight: 800;
   color: var(--link);
-  background: transparent;                 /* ←裏地なし */
-  padding: 0;                              /* ←余白なし */
+  background: transparent;
+  padding: 0;
   border-radius: 0;
-  text-decoration: underline;              /* ←下線 */
-  text-decoration-thickness: 2px;          /* 下線の太さ */
-  text-underline-offset: 0.18em;           /* 文字と下線の距離 */
-  text-decoration-color: rgba(21, 101, 192, 0.55); /* 下線を少し薄く */
+  text-decoration: none;   /* ←下線なし */
   white-space: nowrap;
 }
