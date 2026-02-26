@@ -349,6 +349,61 @@ li{ margin:6px 0; }
   margin:0 0 8px;
   font-size:20px;
 }
+
+/* Journal line under highlight title */
+.publine{
+  margin: 4px 0 12px;
+  font-size: 15px;
+  color: var(--muted);
+}
+.publine a{
+  font-style: italic;
+}
+
+/* Carousel in highlight media */
+.highlight-media.carousel{ position: relative; }
+
+.carousel-track{ position: relative; }
+
+.carousel-item{ display: none; }
+.carousel-item.is-active{ display: block; }
+
+/* 共通の見た目（動画も画像も同じ枠に） */
+.carousel-item > img,
+.carousel-item > video{
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: #000;
+  display: block;
+  object-fit: cover; /* img用。videoにも効くブラウザあり */
+}
+
+/* 左右矢印ボタン */
+.carousel-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.55);
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+}
+.carousel-btn:hover{ background: rgba(0,0,0,0.55); }
+
+.carousel-btn.prev{ left: 12px; }
+.carousel-btn.next{ right: 12px; }
+
 .linkrow{
   display:flex;
   flex-wrap:wrap;
