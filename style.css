@@ -470,13 +470,13 @@ header{
 .pub-item:first-of-type{ border-top:none; }
 
 .pub-thumb{
-  flex: 0 0 150px;
+  flex: 0 0 180px;
 }
 .pub-thumb img{
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   object-fit:cover;
-  border-radius: 18px;
+  border-radius: 20px;
   border:1px solid var(--line);
   display:block;
   box-shadow: 0 10px 24px rgba(0,0,0,0.10);
@@ -543,6 +543,14 @@ header{
 }
 
 @media (max-width: 700px){
-  .pub-thumb{ flex: 0 0 110px; }
-  .pub-thumb img{ width:110px; height:110px; border-radius:16px; }
+  .pub-thumb{ flex: 0 0 120px; }
+  .pub-thumb img{ width:120px; height:120px; border-radius:16px; }
+}
+
+.pub-links{
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+.pub-links a{
+  padding: 8px 14px;
 }
