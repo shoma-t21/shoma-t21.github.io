@@ -26,22 +26,75 @@
   </header>
 
   <main class="container">
-    <section>
-      <h2>Videos</h2>
-      <p class="small">You can embed YouTube/Vimeo or link to MP4 files.</p>
-
-      <div class="item">
-        <div class="item-title">Patabot summary movie</div>
-        <div class="meta"><a href="#">YouTube link</a></div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">Swarm experiment demo</div>
-        <div class="meta"><a href="#">Video link</a></div>
+    <section class="section" id="videos">
+      <h2 class="section-heading">Videos</h2>
+  
+      <div class="video-grid">
+        <!-- Card 1 -->
+        <article class="video-card">
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_1"
+              title="YouTube video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <h3 class="video-title">
+            Soft Tensegrity Robot Driven by Thin Artificial Muscles for the Exploration of Unknown Spatial Configurations
+          </h3>
+        </article>
+  
+        <!-- Card 2 -->
+        <article class="video-card">
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_2"
+              title="YouTube video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <h3 class="video-title">
+            Large Torsion Thin Artificial Muscles Tensegrity Structure for Twist Manipulation
+          </h3>
+        </article>
+  
+        <!-- Card 3 -->
+        <article class="video-card">
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_3"
+              title="YouTube video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <h3 class="video-title">
+            (Paper title for video 3)
+          </h3>
+        </article>
+  
+        <!-- Card 4 -->
+        <article class="video-card">
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_4"
+              title="YouTube video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <h3 class="video-title">
+            (Paper title for video 4)
+          </h3>
+        </article>
       </div>
     </section>
-
-    <div class="footer">© <span id="y"></span> Shoma Tanaka</div>
   </main>
 
   <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
