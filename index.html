@@ -482,15 +482,24 @@
     let idx = items.findIndex(el => el.classList.contains('is-active'));
     if (idx < 0) { idx = 0; items[0].classList.add('is-active'); }
 
-    const show = (newIdx) => {
-      items.forEach((el, i) => {
-        const active = (i === newIdx);
-        el.classList.toggle('is-active', active);
-        const v = el.querySelector('video');
-        if (v && !active) v.pause();
-      });
-      idx = newIdx;
-    };
+  const show = (newIdx) => {
+    items.forEach((el, i) => {
+      const active = (i === newIdx);
+      el.classList.toggle('is-active', active);
+  
+      const v = el.querySelector('video');
+      if (v) {
+        if (!active) {
+          v.pause();
+          v.currentTime = 0;
+        } else {
+          const p = v.play();
+          if (p && typeof p.catch === 'function') p.catch(() => {});
+        }
+      }
+    });
+    idx = newIdx;
+  };
 
     prev.addEventListener('click', (e) => {
       e.preventDefault();
