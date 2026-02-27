@@ -522,3 +522,70 @@ li{ margin:6px 0; }
 }
 
 #highlights{ scroll-margin-top: 50px; }
+
+/* ===== Publications page ===== */
+
+.pub-cat{
+  display:flex;
+  gap:36px;              /* 左画像と右文章の間隔 */
+  align-items:flex-start;
+}
+
+.pub-cat-media{
+  flex:0 0 360px;        /* 左画像の幅 */
+}
+
+.pub-cat-media img{
+  width:100%;
+  aspect-ratio: 4 / 3;   /* 四角い感じ（好みで 16/9 でもOK） */
+  object-fit: cover;
+  border-radius:16px;
+  border:1px solid var(--line);
+  display:block;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+}
+
+.pub-cat-body{
+  flex:1;
+}
+
+/* ここのフォントが小さく見えないように明示 */
+.pub-cite{
+  font-size:16.5px;      /* bodyと揃える */
+  line-height:1.8;
+}
+
+.pub-entry{
+  padding:14px 0;
+  border-top:1px solid var(--line);
+}
+
+.pub-cat-body .pub-entry:first-of-type{
+  border-top:none;
+}
+
+.pub-links{
+  margin-top:10px;
+}
+
+/* Awards / etc lists */
+.pub-subheading{
+  margin:18px 0 6px;
+  font-size:18px;
+  font-weight:800;
+}
+
+.pub-list{
+  margin: 10px 0 0 20px;
+}
+
+.pub-list li{
+  margin: 8px 0;
+  font-size:16.5px;
+  line-height:1.8;
+}
+
+@media (max-width: 900px){
+  .pub-cat{ flex-direction:column; }
+  .pub-cat-media{ flex:1; max-width:560px; }
+}
