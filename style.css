@@ -525,28 +525,49 @@ li{ margin:6px 0; }
 
 /* ===== Publications page ===== */
 
-.pub-cat{
+/* ===== Publications: per-item thumbnail layout (Alberto-like) ===== */
+
+.pub-item{
   display:flex;
-  gap:36px;              /* 左画像と右文章の間隔 */
+  gap:18px;
+  padding:16px 0;
+  border-top:1px solid var(--line);
   align-items:flex-start;
 }
-
-.pub-cat-media{
-  flex:0 0 360px;        /* 左画像の幅 */
+.pub-item:first-of-type{
+  border-top:none;
 }
 
-.pub-cat-media img{
-  width:100%;
-  aspect-ratio: 4 / 3;   /* 四角い感じ（好みで 16/9 でもOK） */
-  object-fit: cover;
-  border-radius:16px;
+.pub-thumb{
+  flex:0 0 110px;
+}
+.pub-thumb img{
+  width:110px;
+  height:110px;
+  object-fit:cover;
+  border-radius:16px;           /* 四角＋角丸 */
   border:1px solid var(--line);
   display:block;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
 }
 
-.pub-cat-body{
+.pub-main{
   flex:1;
+}
+
+.pub-cite{
+  font-size:16.5px;
+  line-height:1.8;
+}
+
+.pub-links{
+  margin-top:10px;
+}
+
+@media (max-width: 700px){
+  .pub-item{ gap:14px; }
+  .pub-thumb{ flex:0 0 90px; }
+  .pub-thumb img{ width:90px; height:90px; border-radius:14px; }
 }
 
 /* ここのフォントが小さく見えないように明示 */
