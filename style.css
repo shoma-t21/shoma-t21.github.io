@@ -520,3 +520,5 @@ li{ margin:6px 0; }
   text-decoration: none;   /* ←下線なし */
   white-space: nowrap;
 }
+
+#highlights{ scroll-margin-top: 90px; }
