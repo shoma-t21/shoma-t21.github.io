@@ -596,3 +596,7 @@ header{
   .video-grid{ grid-template-columns: 1fr; }
   .video-title{ font-size: 20px; }
 }
+
+#videos .section-heading{
+  text-align: center;
+}
