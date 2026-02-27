@@ -676,3 +676,25 @@ li{ margin:6px 0; }
   .pub-thumb{ flex: 0 0 110px; }
   .pub-thumb img{ width:110px; height:110px; border-radius:16px; }
 }
+
+/* ===== Centered layout (like Publications) for Home ===== */
+
+/* 見出しは中央 */
+.home-centered .section-heading{
+  text-align: center;
+}
+
+/* 各セクションの中身ブロックを中央に（本文は左揃えのまま） */
+.home-centered .split,
+.home-centered .highlight{
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* HEROだけはフル幅を維持（すでに100vw指定してるので保険） */
+.home-centered .hero-video{
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
