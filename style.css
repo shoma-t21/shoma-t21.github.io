@@ -610,3 +610,69 @@ li{ margin:6px 0; }
   .pub-cat{ flex-direction:column; }
   .pub-cat-media{ flex:1; max-width:560px; }
 }
+
+/* ===== Bigger typography (Alberto-like) ===== */
+
+/* セクション見出し（Interests / Academic trajectory / Grants / Research highlights など） */
+.section-heading{
+  font-size: clamp(28px, 2.4vw, 36px);
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+/* 本文（Interests など） */
+.lead{
+  font-size: 19.5px;
+  line-height: 1.9;
+}
+
+/* Research highlights */
+.highlight-title{
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.highlight-body p{
+  font-size: 17.5px;
+  line-height: 1.85;
+}
+
+/* Academic trajectory / Grants のリスト本文 */
+.timeline .when{
+  font-size: 16px;
+}
+
+.timeline .what{
+  font-size: 17.5px;
+  line-height: 1.85;
+}
+
+/* ===== Publications page centering ===== */
+.pub-page .section-heading{
+  text-align: center;
+}
+
+/* リスト本体は読みやすいように左揃えのまま、ブロック全体だけ中央に */
+.pub-page .pub-item{
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== Bigger thumbnails for each publication ===== */
+.pub-thumb{
+  flex: 0 0 150px;   /* 110px → 150px */
+}
+
+.pub-thumb img{
+  width: 150px;
+  height: 150px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+/* スマホでは少し小さく */
+@media (max-width: 700px){
+  .pub-thumb{ flex: 0 0 110px; }
+  .pub-thumb img{ width:110px; height:110px; border-radius:16px; }
+}
