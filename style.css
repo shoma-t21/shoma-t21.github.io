@@ -452,9 +452,33 @@ header{
 ========================= */
 
 /* Publications page: more side padding */
-.pub-page .container{
-  padding-left: 100px;   /* 14px → 28px に増やす */
+/* Publications page: padding is for MAIN only (not header) */
+.pub-page main.container{
+  padding-left: 100px;
   padding-right: 100px;
+}
+
+/* Keep header spacing same as other pages */
+.pub-page header .container{
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+/* On mobile: remove huge padding + stack items */
+@media (max-width: 900px){
+  .pub-page main.container{
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .pub-item{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pub-thumb{
+    flex: 0 0 auto;
+  }
 }
 
 .pub-page .section-heading{
