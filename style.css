@@ -1,4 +1,6 @@
-/* style.css : simple academic one-page style */
+/* =========================
+   Base
+========================= */
 
 :root{
   --text:#111;
@@ -10,6 +12,7 @@
 
 *{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
+
 body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
@@ -27,6 +30,23 @@ a:hover{ text-decoration:underline; }
   margin:0 auto;
   padding: 0 14px;
 }
+
+.footer{
+  padding:22px 0 40px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.smallmuted{ color:var(--muted); font-size:14px; }
+
+/* Optional generic headings (mostly unused since you use .section-heading) */
+h2{ margin:0 0 8px; font-size:18px; }
+h3{ margin:14px 0 6px; font-size:15px; }
+
+
+/* =========================
+   Header / Nav
+========================= */
 
 header{
   position:sticky;
@@ -46,11 +66,11 @@ header{
 
 .brand{
   font-weight:700;
-  font-size:24px; 
+  font-size:24px;
   letter-spacing:0.2px;
   text-decoration:none;
   color:var(--link);
-  margin-left:12px; 
+  margin-left:12px;
 }
 .brand:hover{ text-decoration:underline; }
 
@@ -59,93 +79,6 @@ header{
   flex-wrap:wrap;
   gap:18px;
   font-size:20px;
-}
-
-.hero{
-  padding:34px 0 10px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns: 240px 1fr;
-  gap:28px;
-  align-items:start;
-}
-
-.card{
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:16px;
-}
-
-.portrait{
-  width:100%;
-  border-radius:14px;
-  border:1px solid var(--line);
-  display:block;
-}
-
-.name{
-  margin: 0 0 4px;
-  font-size:26px;
-  line-height:1.2;
-}
-.affil{
-  margin:0 0 10px;
-  color:var(--muted);
-  font-size:14px;
-}
-.small{
-  font-size:14px;
-  color:var(--muted);
-}
-
-.badges{
-  margin-top:10px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-}
-.badge{
-  font-size:12px;
-  padding:4px 8px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  color:#222;
-}
-
-section{
-  padding:18px 0;
-  border-top:1px solid var(--line);
-}
-section:first-of-type{ border-top:none; }
-
-h2{
-  margin:0 0 8px;
-  font-size:18px;
-}
-h3{
-  margin:14px 0 6px;
-  font-size:15px;
-}
-ul{ margin:8px 0 0 20px; }
-li{ margin:6px 0; }
-
-.item{
-  margin:10px 0;
-}
-.item-title{
-  font-weight:600;
-}
-.meta{
-  color:var(--muted);
-  font-size:13px;
-}
-
-.footer{
-  padding:22px 0 40px;
-  color:var(--muted);
-  font-size:13px;
 }
 
 .menu-btn{
@@ -160,20 +93,16 @@ li{ margin:6px 0; }
 }
 
 @media (max-width: 1150px){
-  .grid{ grid-template-columns: 1fr; }
-
-  /* スマホではタブを隠して、≡ボタンを表示 */
   .menu-btn{
-  display:block;
-  margin-right:12px;   /* ← 追加 */
+    display:block;
+    margin-right:12px;
   }
   .navlinks{ display:none; }
 
-  /* メニューを開いたとき（JSで class="open" を付ける） */
   .navlinks.open{
     display:flex;
     position:absolute;
-    top:54px;              /* ヘッダーの下に出す */
+    top:54px;
     right:18px;
     flex-direction:column;
     gap:10px;
@@ -185,26 +114,28 @@ li{ margin:6px 0; }
     z-index:20;
   }
 
-  /* 右上にメニューを出すため nav を基準にする */
   .nav{ position:relative; }
 }
 
-/* ===== New layout for vertical sections ===== */
+
+/* =========================
+   HERO (Video)
+========================= */
 
 .hero-video{
   position:relative;
   height: clamp(620px, 80vh, 1100px);
-  border-radius:18px;
   overflow:hidden;
   background:#000;
   margin:0;
-  border:1px solid var(--line);
-}
-.hero-video{
+
+  /* full-bleed */
   width:100vw;
   margin-left:calc(50% - 50vw);
   border-radius:0;
+  border:1px solid var(--line);
 }
+
 .hero-bg{
   position:absolute;
   inset:0;
@@ -215,33 +146,55 @@ li{ margin:6px 0; }
   display:block;
   z-index:0;
 }
+
 .hero-overlay{
   position:absolute;
   inset:0;
   z-index:1;
   display:flex;
-  align-items:flex-end;      /* 下に寄せる */
-  justify-content:flex-start;/* 左に寄せる */
-  padding:40px;              /* 左下の余白（好みで調整） */
+  align-items:flex-end;
+  justify-content:flex-start;
+  padding:40px;
   padding-left:70px;
   text-align:left;
-  background:transparent;    /* グラデは消す */
+  background:transparent;
 }
+
 .hero-intro{
-  color:#000;  /* 黒 */
+  color:#000;
   font-size: clamp(24px, 2.8vw, 40px);
   font-weight:700;
   line-height:1.1;
 }
+
+
+/* =========================
+   Sections / Typography (Alberto-like)
+========================= */
+
 .section{
   padding:42px 0;
   border-top:1px solid var(--line);
 }
+
 .section-heading{
   margin:0 0 18px;
-  font-size:24px;
-  font-weight:700;
+  font-size: clamp(28px, 2.4vw, 36px);
+  font-weight: 800;
+  margin-bottom: 18px;
 }
+
+.lead{
+  font-size: 19.5px;
+  line-height: 1.9;
+}
+
+#highlights{ scroll-margin-top: 50px; }
+
+
+/* =========================
+   Layout helpers
+========================= */
 
 .split{
   display:flex;
@@ -249,195 +202,43 @@ li{ margin:6px 0; }
   align-items:center;
 }
 .split.reverse{ flex-direction:row-reverse; }
-.about-split{ gap:36px; }
+.split.align-top{ align-items:flex-start; }
 
 .media{
   flex:0 0 380px;
 }
+
 .media img{
   width:100%;
   border-radius:16px;
   border:1px solid var(--line);
   display:block;
 }
+
+.media-placeholder{
+  width:100%;
+  aspect-ratio: 4 / 3;
+  border-radius:16px;
+  border:1px dashed var(--line);
+  background:#fafafa;
+  color:var(--muted);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:14px;
+}
+
 .content{ flex:1; }
 
-.lead{
-  font-size:18px;
-  line-height:1.7;
-}
 
-.tagrow{
-  margin-top:14px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-}
-.tag{
-  font-size:12.5px;
-  padding:6px 10px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background:#fff;
-}
+/* =========================
+   About block
+========================= */
 
-.social{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:14px;
-}
-.social a{
-  padding:8px 12px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background:#fff;
-  text-decoration:none;
-}
-.social a:hover{ text-decoration:underline; }
-
-.smallmuted{ color:var(--muted); font-size:14px; }
-
-.imgtop img{
-  width:100%;
-  border-radius:16px;
-  border:1px solid var(--line);
-  display:block;
-  margin-bottom:14px;
-}
-
-.timeline{
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-.timeline li{
-  display:flex;
-  gap:16px;
-  padding:10px 0;
-  border-bottom:1px dashed var(--line);
-}
-.timeline .when{
-  width:300px;
-  flex-shrink:0;
-  color:var(--muted);
-  font-weight:700;
-}
-.timeline .what{ flex:1; }
-
-.highlight{
-  display:flex;
-  gap:26px;
-  padding:18px 0;
-  border-top:1px solid var(--line);
-}
-.highlight:first-of-type{ border-top:none; }
-
-.highlight-media{
-  flex:0 0 420px;
-}
-.highlight-media video{
-  width:100%;
-  aspect-ratio:16/9;
-  border-radius:16px;
-  border:1px solid var(--line);
-  background:#000;
-  display:block;
-}
-.highlight-body{ flex:1; }
-.highlight-title{
-  margin:0 0 8px;
-  font-size:20px;
-}
-
-/* Journal line under highlight title */
-.publine{
-  margin: 4px 0 12px;
-  font-size: 15px;
-  color: var(--muted);
-}
-.publine a{
-  font-style: italic;
-}
-
-/* Carousel in highlight media */
-.highlight-media.carousel{ position: relative; }
-
-.carousel-track{ position: relative; }
-
-.carousel-item{ display: none; }
-.carousel-item.is-active{ display: block; }
-
-/* 共通の見た目（動画も画像も同じ枠に） */
-.carousel-item > img,
-.carousel-item > video{
-  width: 100%;
-  aspect-ratio: 16/9;
-  border-radius: 16px;
-  border: 1px solid var(--line);
-  background: #000;
-  display: block;
-  object-fit: cover; /* img用。videoにも効くブラウザあり */
-}
-
-/* 左右矢印ボタン */
-.carousel-btn{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 42px;
-  height: 42px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.55);
-  background: rgba(0,0,0,0.35);
-  color: #fff;
-  font-size: 26px;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 3;
-}
-.carousel-btn:hover{ background: rgba(0,0,0,0.55); }
-
-.carousel-btn.prev{ left: 12px; }
-.carousel-btn.next{ right: 12px; }
-
-.linkrow{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:12px;
-}
-.linkrow a{
-  padding:7px 12px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background:#fff;
-  text-decoration:none;
-}
-.linkrow a:hover{ text-decoration:underline; }
-
-/* Responsive for content layout */
-@media (max-width: 900px){
-  .hero-video{ height:460px; }
-  .hero-title{ font-size:34px; }
-  .media{ flex:1; }
-  .split{ flex-direction:column; }
-  .split.reverse{ flex-direction:column; }
-  .highlight{ flex-direction:column; }
-  .highlight-media{ flex:1; }
-  .timeline li{ flex-direction:column; gap:6px; }
-  .timeline .when{ width:auto; }
-}
-
-/* ===== About layout  ===== */
-
-.split.align-top{ align-items:flex-start; }
+.about-split{ gap:36px; }
 
 .about-split .media{
-  flex:0 0 400px;  /* 顔写真を大きめにしたい場合。大きすぎたら 460px などに */
+  flex:0 0 400px;
 }
 
 .about-name{
@@ -472,43 +273,39 @@ li{ margin:6px 0; }
 
 .muted{ color: var(--muted); }
 
-/* emails under social links */
+.social{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:14px;
+}
+.social a{
+  padding:8px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fff;
+  text-decoration:none;
+}
+.social a:hover{ text-decoration:underline; }
+
 .contactline{
   margin-top: 12px;
   display:flex;
   flex-wrap:wrap;
   gap:10px;
   align-items:baseline;
-  color: var(--text);        /* ←薄字にしない */
+  color: var(--text);
 }
+.contactlabel{ font-weight:700; }
+.contactemails .sep{ margin: 0 6px; color: var(--muted); }
 
-.contactlabel{
-  font-weight:700;
-}
 
-.contactemails .sep{
-  margin: 0 6px;
-  color: var(--muted);
-}
+/* =========================
+   Interests highlight words
+========================= */
 
-/* Interests image placeholder */
-.media-placeholder{
-  width:100%;
-  aspect-ratio: 4 / 3;
-  border-radius:16px;
-  border:1px dashed var(--line);
-  background:#fafafa;
-  color:var(--muted);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:14px;
-}
-
-/* Highlight keywords in Interests */
 .interest-text{
-  font-size: 18px;     /* 既に lead で設定済みなら不要 */
-  line-height: 1.85;   /* 少しゆったりで上品に */
+  line-height: 1.85;
 }
 
 .hl{
@@ -517,117 +314,62 @@ li{ margin:6px 0; }
   background: transparent;
   padding: 0;
   border-radius: 0;
-  text-decoration: none;   /* ←下線なし */
+  text-decoration: none;
   white-space: nowrap;
 }
 
-#highlights{ scroll-margin-top: 50px; }
 
-/* ===== Publications page ===== */
+/* =========================
+   Timeline (Academic trajectory / Grants)
+========================= */
 
-/* ===== Publications: per-item thumbnail layout (Alberto-like) ===== */
+.timeline{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
 
-.pub-item{
+.timeline li{
   display:flex;
-  gap:18px;
-  padding:16px 0;
-  border-top:1px solid var(--line);
-  align-items:flex-start;
-}
-.pub-item:first-of-type{
-  border-top:none;
+  gap:16px;
+  padding:10px 0;
+  border-bottom:1px dashed var(--line);
 }
 
-.pub-thumb{
-  flex:0 0 110px;
-}
-.pub-thumb img{
-  width:110px;
-  height:110px;
-  object-fit:cover;
-  border-radius:16px;           /* 四角＋角丸 */
-  border:1px solid var(--line);
-  display:block;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+.timeline .when{
+  width:300px;
+  flex-shrink:0;
+  color:var(--muted);
+  font-weight:700;
+  font-size:16px;
 }
 
-.pub-main{
+.timeline .what{
   flex:1;
+  font-size:17.5px;
+  line-height:1.85;
 }
 
-.pub-cite{
-  font-size:16.5px;
-  line-height:1.8;
-}
 
-.pub-links{
-  margin-top:10px;
-}
+/* =========================
+   Research highlights
+========================= */
 
-@media (max-width: 700px){
-  .pub-item{ gap:14px; }
-  .pub-thumb{ flex:0 0 90px; }
-  .pub-thumb img{ width:90px; height:90px; border-radius:14px; }
-}
-
-/* ここのフォントが小さく見えないように明示 */
-.pub-cite{
-  font-size:16.5px;      /* bodyと揃える */
-  line-height:1.8;
-}
-
-.pub-entry{
-  padding:14px 0;
+.highlight{
+  display:flex;
+  gap:26px;
+  padding:18px 0;
   border-top:1px solid var(--line);
 }
+.highlight:first-of-type{ border-top:none; }
 
-.pub-cat-body .pub-entry:first-of-type{
-  border-top:none;
+.highlight-media{
+  flex:0 0 420px;
 }
+.highlight-body{ flex:1; }
 
-.pub-links{
-  margin-top:10px;
-}
-
-/* Awards / etc lists */
-.pub-subheading{
-  margin:18px 0 6px;
-  font-size:18px;
-  font-weight:800;
-}
-
-.pub-list{
-  margin: 10px 0 0 20px;
-}
-
-.pub-list li{
-  margin: 8px 0;
-  font-size:16.5px;
-  line-height:1.8;
-}
-
-@media (max-width: 900px){
-  .pub-cat{ flex-direction:column; }
-  .pub-cat-media{ flex:1; max-width:560px; }
-}
-
-/* ===== Bigger typography (Alberto-like) ===== */
-
-/* セクション見出し（Interests / Academic trajectory / Grants / Research highlights など） */
-.section-heading{
-  font-size: clamp(28px, 2.4vw, 36px);
-  font-weight: 800;
-  margin-bottom: 18px;
-}
-
-/* 本文（Interests など） */
-.lead{
-  font-size: 19.5px;
-  line-height: 1.9;
-}
-
-/* Research highlights */
 .highlight-title{
+  margin:0 0 8px;
   font-size: 24px;
   line-height: 1.25;
 }
@@ -637,64 +379,164 @@ li{ margin:6px 0; }
   line-height: 1.85;
 }
 
-/* Academic trajectory / Grants のリスト本文 */
-.timeline .when{
-  font-size: 16px;
+.publine{
+  margin: 4px 0 12px;
+  font-size: 15px;
+  color: var(--muted);
+}
+.publine a{ font-style: italic; }
+
+.linkrow{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:12px;
+}
+.linkrow a{
+  padding:7px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fff;
+  text-decoration:none;
+}
+.linkrow a:hover{ text-decoration:underline; }
+
+
+/* =========================
+   Carousel (for Research highlights)
+========================= */
+
+.highlight-media.carousel{ position: relative; }
+.carousel-track{ position: relative; }
+
+.carousel-item{ display: none; }
+.carousel-item.is-active{ display: block; }
+
+.carousel-item > img,
+.carousel-item > video{
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: #000;
+  display: block;
+  object-fit: cover;
 }
 
-.timeline .what{
-  font-size: 17.5px;
-  line-height: 1.85;
+.carousel-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.55);
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
 }
+.carousel-btn:hover{ background: rgba(0,0,0,0.55); }
+.carousel-btn.prev{ left: 12px; }
+.carousel-btn.next{ right: 12px; }
 
-/* ===== Publications page centering ===== */
+
+/* =========================
+   Publications (per-item thumbnail layout)
+========================= */
+
 .pub-page .section-heading{
   text-align: center;
 }
 
-/* リスト本体は読みやすいように左揃えのまま、ブロック全体だけ中央に */
-.pub-page .pub-item{
-  max-width: 1050px;
-  margin-left: auto;
-  margin-right: auto;
+.pub-item{
+  display:flex;
+  gap:18px;
+  padding:16px 0;
+  border-top:1px solid var(--line);
+  align-items:flex-start;
 }
+.pub-item:first-of-type{ border-top:none; }
 
-/* ===== Bigger thumbnails for each publication ===== */
 .pub-thumb{
-  flex: 0 0 150px;   /* 110px → 150px */
+  flex: 0 0 150px;
 }
-
 .pub-thumb img{
   width: 150px;
   height: 150px;
+  object-fit:cover;
   border-radius: 18px;
-  object-fit: cover;
+  border:1px solid var(--line);
+  display:block;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
 }
 
-/* スマホでは少し小さく */
-@media (max-width: 700px){
-  .pub-thumb{ flex: 0 0 110px; }
-  .pub-thumb img{ width:110px; height:110px; border-radius:16px; }
+.pub-main{ flex:1; }
+
+.pub-cite{
+  font-size:16.5px;
+  line-height:1.8;
 }
 
-/* ===== Centered layout (like Publications) for Home ===== */
+.pub-links{ margin-top:10px; }
 
-/* 見出しは中央 */
+.pub-list{
+  margin: 10px 0 0 20px;
+}
+.pub-list li{
+  margin: 8px 0;
+  font-size:16.5px;
+  line-height:1.8;
+}
+
+
+/* =========================
+   Home centered headings (only)
+========================= */
+
 .home-centered .section-heading{
   text-align: center;
 }
 
-/* 各セクションの中身ブロックを中央に（本文は左揃えのまま） */
+/* make sure no accidental width restriction */
 .home-centered .split,
 .home-centered .highlight{
   max-width: none;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
 }
 
-/* HEROだけはフル幅を維持（すでに100vw指定してるので保険） */
+/* HERO stays full-bleed */
 .home-centered .hero-video{
   max-width: none;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
+}
+
+
+/* =========================
+   Responsive layout
+========================= */
+
+@media (max-width: 900px){
+  .hero-video{ height:460px; }
+
+  .media{ flex:1; }
+  .split{ flex-direction:column; }
+  .split.reverse{ flex-direction:column; }
+
+  .highlight{ flex-direction:column; }
+  .highlight-media{ flex:1; }
+
+  .timeline li{ flex-direction:column; gap:6px; }
+  .timeline .when{ width:auto; }
+}
+
+@media (max-width: 700px){
+  .pub-thumb{ flex: 0 0 110px; }
+  .pub-thumb img{ width:110px; height:110px; border-radius:16px; }
 }
