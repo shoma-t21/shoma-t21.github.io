@@ -452,8 +452,8 @@ header{
 
 /* Publications page: more side padding */
 .pub-page .container{
-  padding-left: 50px;   /* 14px → 28px に増やす */
-  padding-right: 50px;
+  padding-left: 100px;   /* 14px → 28px に増やす */
+  padding-right: 100px;
 }
 
 .pub-page .section-heading{
