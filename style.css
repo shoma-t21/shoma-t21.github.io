@@ -450,6 +450,12 @@ header{
    Publications (per-item thumbnail layout)
 ========================= */
 
+/* Publications page: more side padding */
+.pub-page .container{
+  padding-left: 28px;   /* 14px → 28px に増やす */
+  padding-right: 28px;
+}
+
 .pub-page .section-heading{
   text-align: center;
 }
