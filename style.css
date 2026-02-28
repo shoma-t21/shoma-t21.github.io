@@ -638,3 +638,15 @@ header{
   display:block;
   object-fit: contain; /* 実質不要だけど保険 */
 }
+
+#gallery .section-heading{
+  text-align: center;
+}
+
+.gallery-desc{
+  font-size: 16.5px;     /* index.html本文と同じ */
+  line-height: 1.8;
+  color: var(--muted);
+  text-align: center;
+  margin: 0 0 22px;
+}
