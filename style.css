@@ -650,3 +650,7 @@ header{
   text-align: center;
   margin: 0 0 22px;
 }
+
+#gallery .video-title{
+  text-align: right;
+}
