@@ -631,3 +631,10 @@ header{
   object-fit: cover;
   display:block;
 }
+
+.video-embed img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit: contain; /* 実質不要だけど保険 */
+}
