@@ -651,6 +651,7 @@ header{
   margin: 0 0 22px;
 }
 
+#videos .video-title,
 #gallery .video-title{
-  text-align: right;
+  text-align: center;
 }
