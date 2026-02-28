@@ -233,15 +233,21 @@
         
           <div class="carousel-track">
             <div class="carousel-item is-active">
-              <video class="hl-video" autoplay muted loop playsinline preload="none" data-src="hero.mp4"></video>
+              <video class="hl-video" autoplay muted loop playsinline preload="metadata">
+                <source src="hero.mp4" type="video/mp4" />
+              </video>
             </div>
 
             <div class="carousel-item">
-              <video class="hl-video" autoplay muted loop playsinline preload="none" data-src="patabot_highlight0.mp4"></video>
+              <video class="hl-video" autoplay muted loop playsinline preload="metadata">
+                <source src="patabot_highlight0.mp4" type="video/mp4" />
+              </video>
             </div>
              
             <div class="carousel-item">
-              <video class="hl-video" autoplay muted loop playsinline preload="none" data-src="patabot_highlight1.mp4"></video>
+              <video class="hl-video" autoplay muted loop playsinline preload="metadata">
+                <source src="patabot_highlight1.mp4" type="video/mp4" />
+              </video>
             </div>
 
             <div class="carousel-item">
@@ -249,7 +255,9 @@
             </div>
             
             <div class="carousel-item">
-              <video class="hl-video" autoplay muted loop playsinline preload="none" data-src="patabot_highlight2.mp4"></video>
+              <video class="hl-video" autoplay muted loop playsinline preload="metadata">
+                <source src="patabot_highlight2.mp4" type="video/mp4" />
+              </video>
             </div>
             
           </div>
@@ -273,7 +281,9 @@
         
           <div class="carousel-track">
             <div class="carousel-item is-active">
-              <video class="hl-video" autoplay muted loop playsinline preload="none" data-src="highlight_patabot.mp4"></video>
+              <video class="hl-video" autoplay muted loop playsinline preload="metadata">
+                <source src="highlight_patabot.mp4" type="video/mp4" />
+              </video>
             </div>
         
             <div class="carousel-item">
@@ -302,7 +312,9 @@
         
           <div class="carousel-track">
             <div class="carousel-item is-active">
-              <video class="hl-video" autoplay muted loop playsinline preload="none" data-src="TES_MAM.mp4"></video>
+              <video class="hl-video" autoplay muted loop playsinline preload="metadata">
+                <source src="TES_MAM.mp4" type="video/mp4" />
+              </video>
             </div>
       
           </div>
@@ -326,11 +338,15 @@
         
           <div class="carousel-track">
             <div class="carousel-item is-active">
-              <video class="hl-video" autoplay muted loop playsinline preload="none" data-src="Back2.mp4"></video>
+              <video class="hl-video" autoplay muted loop playsinline preload="metadata">
+                <source src="Back2.mp4" type="video/mp4" />
+              </video>
             </div>
 
             <div class="carousel-item">
-              <video class="hl-video" autoplay muted loop playsinline preload="none" data-src="Back3.mp4"></video>
+              <video class="hl-video" autoplay muted loop playsinline preload="metadata">
+                <source src="Back3.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
         </div>
@@ -354,7 +370,9 @@
         
           <div class="carousel-track">
             <div class="carousel-item is-active">
-              <video class="hl-video" autoplay muted loop playsinline preload="none" data-src="highlight_patabot.mp4"></video>
+              <video class="hl-video" autoplay muted loop playsinline preload="metadata">
+                <source src="highlight_patabot.mp4" type="video/mp4" />
+              </video>
             </div>
         
             <div class="carousel-item">
@@ -362,7 +380,9 @@
             </div>
         
             <div class="carousel-item">
-              <video class="hl-video" autoplay muted loop playsinline preload="none" data-src="highlight_patabot2.mp4"></video>
+              <video class="hl-video" autoplay muted loop playsinline preload="metadata">
+                <source src="highlight_patabot2.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
         </div>
@@ -386,7 +406,9 @@
         
           <div class="carousel-track">
             <div class="carousel-item is-active">
-              <video class="hl-video" autoplay muted loop playsinline preload="none" data-src="highlight_patabot.mp4"></video>
+              <video class="hl-video" autoplay muted loop playsinline preload="metadata">
+                <source src="highlight_patabot.mp4" type="video/mp4" />
+              </video>
             </div>
         
             <div class="carousel-item">
@@ -394,7 +416,9 @@
             </div>
         
             <div class="carousel-item">
-              <video class="hl-video" autoplay muted loop playsinline preload="none" data-src="highlight_patabot2.mp4"></video>
+              <video class="hl-video" autoplay muted loop playsinline preload="metadata">
+                <source src="highlight_patabot2.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
         </div>
@@ -453,29 +477,24 @@
     let idx = items.findIndex(el => el.classList.contains('is-active'));
     if (idx < 0) { idx = 0; items[0].classList.add('is-active'); }
 
-    const show = (newIdx) => {
-      items.forEach((el, i) => {
-        const active = (i === newIdx);
-        el.classList.toggle('is-active', active);
-    
-        const v = el.querySelector('video');
-        if (!v) return;
-    
+  const show = (newIdx) => {
+    items.forEach((el, i) => {
+      const active = (i === newIdx);
+      el.classList.toggle('is-active', active);
+  
+      const v = el.querySelector('video');
+      if (v) {
         if (!active) {
           v.pause();
-          return;
+          v.currentTime = 0;
+        } else {
+          const p = v.play();
+          if (p && typeof p.catch === 'function') p.catch(() => {});
         }
-    
-        // 初回だけ読み込む
-        if (!v.src) {
-          v.src = v.dataset.src;
-          v.load();
-        }
-        const p = v.play();
-        if (p && typeof p.catch === 'function') p.catch(() => {});
-      });
-      idx = newIdx;
-    };
+      }
+    });
+    idx = newIdx;
+  };
 
     prev.addEventListener('click', (e) => {
       e.preventDefault();
