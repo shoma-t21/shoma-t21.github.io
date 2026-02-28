@@ -5,31 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gallery | Shoma Tanaka</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .gallery{
-      display:grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap:14px;
-      margin-top:12px;
-    }
-    .gallery img{
-      width:100%;
-      border-radius:14px;
-      border:1px solid #e6e6e6;
-      display:block;
-    }
-  </style>
 </head>
+
 <body>
   <header>
     <div class="container nav">
       <a class="brand" href="index.html">Shoma Tanaka</a>
-  
-      <!-- 追加：スマホ用ボタン -->
+
       <button class="menu-btn" aria-label="Open menu" aria-expanded="false">
         &#9776;
       </button>
-  
+
       <nav class="navlinks">
         <a href="publications.html">Publications</a>
         <a href="index.html#highlights">Research</a>
@@ -40,36 +26,90 @@
   </header>
 
   <main class="container">
-    <section>
-      <h2>Gallery</h2>
-      <p class="small">Upload images to the repo and list them here.</p>
+    <section class="section" id="gallery">
+      <h2 class="section-heading">Gallery</h2>
 
-      <div class="gallery">
-        <!-- 例：gallery1.jpg をアップロードしたら src を合わせる -->
-        <!-- <img src="gallery1.jpg" alt="Gallery image 1"> -->
-        <!-- <img src="gallery2.jpg" alt="Gallery image 2"> -->
+      <div class="video-grid">
+        <!-- City 1 -->
+        <article class="video-card">
+          <div class="video-embed">
+            <img src="gallery_city1.jpg"
+                 alt="City 1"
+                 loading="lazy"
+                 decoding="async"
+                 fetchpriority="low">
+          </div>
+          <h3 class="video-title">City 1</h3>
+        </article>
+
+        <!-- City 2 -->
+        <article class="video-card">
+          <div class="video-embed">
+            <img src="gallery_city2.jpg"
+                 alt="City 2"
+                 loading="lazy"
+                 decoding="async"
+                 fetchpriority="low">
+          </div>
+          <h3 class="video-title">City 2</h3>
+        </article>
+
+        <!-- City 3 -->
+        <article class="video-card">
+          <div class="video-embed">
+            <img src="gallery_city3.jpg"
+                 alt="City 3"
+                 loading="lazy"
+                 decoding="async"
+                 fetchpriority="low">
+          </div>
+          <h3 class="video-title">City 3</h3>
+        </article>
+
+        <!-- City 4 -->
+        <article class="video-card">
+          <div class="video-embed">
+            <img src="gallery_city4.jpg"
+                 alt="City 4"
+                 loading="lazy"
+                 decoding="async"
+                 fetchpriority="low">
+          </div>
+          <h3 class="video-title">City 4</h3>
+        </article>
+
+        <!-- City 5 -->
+        <article class="video-card">
+          <div class="video-embed">
+            <img src="gallery_city5.jpg"
+                 alt="City 5"
+                 loading="lazy"
+                 decoding="async"
+                 fetchpriority="low">
+          </div>
+          <h3 class="video-title">City 5</h3>
+        </article>
       </div>
     </section>
 
     <div class="footer">© <span id="y"></span> Shoma Tanaka</div>
   </main>
 
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
   <script>
-  const btn = document.querySelector('.menu-btn');
-  const nav = document.querySelector('.navlinks');
+    document.getElementById("y").textContent = new Date().getFullYear();
 
-  btn.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!nav.contains(e.target) && !btn.contains(e.target)) {
-      nav.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  });
+    const btn = document.querySelector('.menu-btn');
+    const nav = document.querySelector('.navlinks');
+    btn.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !btn.contains(e.target)) {
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
   </script>
 </body>
 </html>
